@@ -6,7 +6,7 @@
   >
     <aside-tools is-main-menu>
       <template #label>
-        Admin <b class="font-black">One</b>
+        <h2 class="font-black">Smart Office</h2>
       </template>
     </aside-tools>
     <div>

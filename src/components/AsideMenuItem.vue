@@ -1,24 +1,14 @@
 <template>
   <li>
-    <component
-      :is="componentIs"
-      :to="itemTo"
-      :href="itemHref"
-      exact-active-class="bg-gray-700"
+    <component :is="componentIs" :to="itemTo" :href="itemHref" exact-active-class="bg-gray-700"
       class="flex text-gray-300 cursor-pointer hover:bg-gray-700"
-      :class="{'py-2': !isSubmenuList, 'p-3 text-sm': isSubmenuList}"
-      @click="menuClick"
-    >
+      :class="{ 'py-2': !isSubmenuList, 'p-3 text-sm': isSubmenuList }" @click="menuClick">
       <icon v-if="item.icon" :path="item.icon" class="flex-none" w="w-12" />
       <span class="flex-grow">{{ item.label }}</span>
       <icon v-if="hasDropdown" :path="dropdownIcon" class="flex-none" w="w-12" />
     </component>
-    <aside-menu-list
-      v-if="hasDropdown"
-      :menu="item.menu"
-      :class="{ 'hidden': !isDropdownActive, 'block bg-gray-600': isDropdownActive }"
-      is-submenu-list
-    />
+    <aside-menu-list v-if="hasDropdown" :menu="item.menu"
+      :class="{ 'hidden': !isDropdownActive, 'block bg-gray-600': isDropdownActive }" is-submenu-list />
   </li>
 </template>
 

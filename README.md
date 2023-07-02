@@ -1,1 +1,1 @@
-# [Smart Office Application]
+# Smart Office Application

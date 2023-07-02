@@ -8,7 +8,7 @@
 // @ is an alias to /src
 import { ref } from 'vue'
 import { useStore } from 'vuex'
-import { mdiDesktopMac, mdiTable, mdiSquareEditOutline, mdiAccountCircle, mdiLock, mdiViewList, mdiCreditCard, mdiHelpCircle, mdiGithub } from '@mdi/js'
+import { mdiDesktopMac, mdiTable, mdiViewList } from '@mdi/js'
 import NavBar from '@/components/NavBar'
 import AsideMenu from '@/components/AsideMenu'
 
@@ -29,16 +29,13 @@ export default {
 
     const menu = ref(
       [
-        'General',
+        'Menus',
         [
           {
             to: '/',
             icon: mdiDesktopMac,
             label: 'Dashboard'
-          }
-        ],
-        'Examples',
-        [
+          },
           {
             to: '/tables',
             label: 'Tables',
@@ -46,53 +43,35 @@ export default {
             updateMark: true
           },
           {
-            to: '/forms',
-            label: 'Forms',
-            icon: mdiSquareEditOutline
-          },
+            to: '/visitors',
+            label: 'Visitors',
+            icon: mdiTable,
+            updateMark: true
+          }
+        ],
+        'Settings',
+        [
           {
-            to: '/profile',
-            label: 'Profile',
-            icon: mdiAccountCircle
-          },
-          {
-            to: '/login',
-            label: 'Login',
-            icon: mdiLock
-          },
-          {
-            label: 'Submenus',
+            label: 'Configuration',
             subLabel: 'Submenus Example',
             icon: mdiViewList,
             menu: [
               {
                 href: '#void',
-                label: 'Sub-item One'
+                label: 'Visit purpose',
+                icon: mdiViewList
               },
               {
                 href: '#void',
-                label: 'Sub-item Two'
+                label: 'Departments',
+                icon: mdiViewList
+              },
+              {
+                href: '#void',
+                label: 'Sites',
+                icon: mdiViewList
               }
             ]
-          }
-        ],
-        'About',
-        [
-          {
-            href: 'https://admin-one.justboil.me',
-            label: 'Premium Demo',
-            icon: mdiCreditCard,
-            prevent: true
-          },
-          {
-            href: 'https://justboil.me/tailwind-admin-templates',
-            label: 'About',
-            icon: mdiHelpCircle
-          },
-          {
-            href: 'https://github.com/justboil/admin-one-vue-tailwind',
-            label: 'GitHub',
-            icon: mdiGithub
           }
         ]
       ]

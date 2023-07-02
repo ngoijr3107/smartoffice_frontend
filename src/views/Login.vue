@@ -1,9 +1,9 @@
 <template>
   <main-section>
-    <card-component title="Login" :icon="mdiLock" class="w-11/12 md:w-5/12 shadow-2xl rounded-lg">
+    <card-component title="Welcome! Enter your details to Login" class="w-11/12 md:w-5/12 shadow-2xl rounded-lg">
       <form method="get">
 
-        <field label="Login" help="Please enter your login" spaced>
+        <field label="Username" help="Please enter your username" spaced>
           <control :icon-left="mdiAccount">
             <input v-model="form.login" class="input" type="text" name="login" placeholder="user@example.com" autocomplete="username">
           </control>
@@ -24,11 +24,6 @@
             <button type="submit" class="button blue">
               Login
             </button>
-          </control>
-          <control>
-            <router-link to="/" class="button">
-              Back
-            </router-link>
           </control>
         </field>
       </form>

@@ -1,10 +1,18 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home'
+import Checkin from '../views/public/Home'
+import Visitors from '../views/visitors/Visitors'
 
 const routes = [
   {
-    // Document title tag
-    // We combine it with defaultDocumentTitle set in `src/main.js` on router.afterEach hook
+    meta: {
+      title: 'Check-In'
+    },
+    path: '/checkin',
+    name: 'checkin',
+    component: Checkin
+  },
+  {
     meta: {
       title: 'Dashboard'
     },
@@ -18,10 +26,7 @@ const routes = [
     },
     path: '/visitors',
     name: 'visitors',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "tables" */ '../views/visitors/Visitors')
+    component: Visitors
   },
   {
     meta: {
@@ -29,9 +34,6 @@ const routes = [
     },
     path: '/tables',
     name: 'tables',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "tables" */ '../views/Tables')
   },
   {

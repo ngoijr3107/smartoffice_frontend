@@ -29,7 +29,7 @@ export default {
 
     const menu = ref(
       [
-        'Menus',
+        'General',
         [
           {
             to: '/',

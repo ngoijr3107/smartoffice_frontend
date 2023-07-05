@@ -8,9 +8,7 @@
     </template>
   </hero-bar>
   <main-section>
-
     <card-component title="Checked-In" :icon="mdiAccountMultiple" has-table>
-      <!-- <clients-table checkable/> -->
       <table>
         <thead>
           <tr>
@@ -56,7 +54,6 @@ export default {
     HeroBar,
     CardComponent
   },
-  visitorList: [],
   setup () {
     const titleStack = ref(['Admin', 'Tables'])
     const visitorList = ref([])
@@ -79,5 +76,4 @@ export default {
     }
   }
 }
-
 </script>

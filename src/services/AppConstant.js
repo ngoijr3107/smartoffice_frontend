@@ -1,4 +1,5 @@
 import axios from 'axios'
+
 export const AppConstant = {
   baseUrl:
     'http://smartofficebackend.test/api/',

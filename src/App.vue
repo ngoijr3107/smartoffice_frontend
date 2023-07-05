@@ -37,12 +37,6 @@ export default {
             label: 'Dashboard'
           },
           {
-            to: '/tables',
-            label: 'Tables',
-            icon: mdiTable,
-            updateMark: true
-          },
-          {
             to: '/visitors',
             label: 'Visitors',
             icon: mdiTable,
@@ -57,17 +51,17 @@ export default {
             icon: mdiViewList,
             menu: [
               {
-                href: '#void',
+                to: '/purposes',
                 label: 'Visit purpose',
                 icon: mdiViewList
               },
               {
-                href: '#void',
+                to: '/departments',
                 label: 'Departments',
                 icon: mdiViewList
               },
               {
-                href: '#void',
+                to: '/sites',
                 label: 'Sites',
                 icon: mdiViewList
               }

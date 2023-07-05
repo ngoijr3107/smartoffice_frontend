@@ -1,9 +1,36 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home'
-import Checkin from '../views/public/Home'
+import Checkin from '../views/public_views/Home'
 import Visitors from '../views/visitors/Visitors'
+import Sites from '../views/configuration_views/Sites'
+import Department from '../views/configuration_views/Departments'
+import Purpose from '../views/configuration_views/Purposes'
 
 const routes = [
+  {
+    meta: {
+      title: 'Sites'
+    },
+    path: '/sites',
+    name: 'sites',
+    component: Sites
+  },
+  {
+    meta: {
+      title: 'Department'
+    },
+    path: '/departments',
+    name: 'departments',
+    component: Department
+  },
+  {
+    meta: {
+      title: 'Purpose'
+    },
+    path: '/purposes',
+    name: 'purposes',
+    component: Purpose
+  },
   {
     meta: {
       title: 'Check-In'

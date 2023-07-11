@@ -10,7 +10,6 @@
   <main-section>
 
     <card-component title="All purposes" :icon="mdiTable" has-table>
-      <!-- <clients-table checkable/> -->
       <table>
         <thead>
           <tr>
@@ -23,7 +22,6 @@
           <tr v-for="purpose in purposeList" :key="purpose.id">
             <td>{{ purpose.code }}</td>
             <td>{{ purpose.description }}</td>
-            <!-- <td>{{ visitor.lname }}</td> -->
           </tr>
         </tbody>
       </table>
@@ -46,16 +44,15 @@ export default {
     HeroBar,
     CardComponent
   },
-  purposeList: [],
   setup () {
     const titleStack = ref(['Admin', 'Tables'])
-    const purposeList = ref([])
+    const purposeList = []
 
     onMounted(async () => {
       try {
-        purposeList.value = await PurposeService.getPurpose()
+        PurposeService.getPurpose(this)
       } catch (error) {
-        console.error(error)
+        console.log(error)
       }
     })
 
